@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jed's Rock Scissor Paper Game</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div id="game-container">
+      <section id="scoreboard">
+        <div><img class="logo" src="images/logo.svg" alt="Logo" /></div>
+        <div class="scoresheet">
+          <p>SCORE</p>
+          <h1>11</h1>
+        </div>
+      </section>
+      <section id="game-start-section">
+        <div class="game-start-section-con">
+          <img class="triangle" src="images/bg-triangle.svg" />
+          <div class="outer-circle paper-circle">
+            <div class="inner-circle">
+              <img src="images/icon-paper.svg" />
+            </div>
+          </div>
+          <div class="outer-circle scissor-circle">
+            <div class="inner-circle">
+              <img src="images/icon-scissors.svg" />
+            </div>
+          </div>
+
+          <div class="outer-circle rock-circle">
+            <div class="inner-circle">
+              <img src="images/icon-rock.svg" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="game-started-section">
+        
+        <div class="player-section">
+          <p>YOU PICKED</p>
+          <div class="player">
+            <div class="player-circle scissor-circle">
+              <div class="inner-circle">
+                <img src="images/icon-scissors.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="result-con">
+          <h1 class="result">YOU WIN</h1>
+          <button class="play-again-btn">PLAY AGAIN</button>
+        </div>
+        <div class="house-section">
+          <p>THE HOUSE PICKED</p>
+          <div class="player">
+            <div class="house-circle scissor-circle">
+              <div class="inner-circle">
+                <img src="images/icon-scissors.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+      <section class="rule-section">
+        <h1>Rules</h1>
+        <img src="images/image-rules.svg" />
+      </section>
+      <section class="rules-btn-con">
+        <p class="signature">J &#128522;d, Set Awon Frontend Geng</p>
+        <button class="rules-btn">RULES</button>
+      </section>
+    </div>
+  </body>
+</html>
