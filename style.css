@@ -53,6 +53,7 @@ body {
   margin: auto;
   margin-top: 10em;
   position: relative;
+  display: none;
 }
 
 .triangle {
@@ -108,7 +109,6 @@ body {
   margin-right: auto;
   text-align: center;
   margin-top: 4em;
-  display: none;
 }
 
 #game-started-section p {
