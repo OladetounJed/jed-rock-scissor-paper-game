@@ -53,7 +53,8 @@ body {
   margin: auto;
   margin-top: 10em;
   position: relative;
-  display: none;
+ 
+  
 }
 
 .triangle {
@@ -255,7 +256,9 @@ body {
     position: absolute;
     top: 23em;
     left: 30%;
+    
   }
+ 
   .rules-btn-con {
     margin-top: 13em;
     flex-direction: column-reverse;

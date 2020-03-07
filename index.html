@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   </head>
   <body>
     <div id="game-container">
@@ -16,40 +17,38 @@
         <div><img class="logo" src="images/logo.svg" alt="Logo" /></div>
         <div class="scoresheet">
           <p>SCORE</p>
-          <h1>11</h1>
+          <h1>{{ score }}</h1>
         </div>
       </section>
-      <section id="game-start-section">
+      <section id="game-start-section" v-if="!gameRunning">
         <div class="game-start-section-con">
           <img class="triangle" src="images/bg-triangle.svg" />
-          <div class="outer-circle paper-circle">
+          <div class="outer-circle paper-circle" @click="gameStarted(event)">
             <div class="inner-circle">
               <img src="images/icon-paper.svg" />
             </div>
           </div>
-          <div class="outer-circle scissor-circle">
+          <div class="outer-circle scissor-circle" @click="gameStarted(event)">
             <div class="inner-circle">
               <img src="images/icon-scissors.svg" />
             </div>
           </div>
 
-          <div class="outer-circle rock-circle">
+          <div class="outer-circle rock-circle" @click="gameStarted(event)">
             <div class="inner-circle">
               <img src="images/icon-rock.svg" />
             </div>
           </div>
         </div>
       </section>
-      <section id="game-started-section">
+      <section id="game-started-section" v-else>
         
         <div class="player-section">
           <p>YOU PICKED</p>
           <div class="player">
-            <div class="player-circle scissor-circle">
-              <div class="inner-circle">
-                <img src="images/icon-scissors.svg" />
-              </div>
-            </div>
+
+            
+            
           </div>
         </div>
         <div class="result-con">
@@ -58,12 +57,8 @@
         </div>
         <div class="house-section">
           <p>THE HOUSE PICKED</p>
-          <div class="player">
-            <div class="house-circle scissor-circle">
-              <div class="inner-circle">
-                <img src="images/icon-scissors.svg" />
-              </div>
-            </div>
+          <div class="house">
+            
           </div>
         </div>
       </div>
@@ -77,5 +72,7 @@
         <button class="rules-btn">RULES</button>
       </section>
     </div>
+    <script type="text/javascript" src="/app.js"></script>
+    <script type="text/javascript" src="/script.js"></script>
   </body>
 </html>
