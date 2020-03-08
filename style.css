@@ -177,11 +177,7 @@ body {
   letter-spacing: 0.1em;
 }
 
-.player-circle {
-  display: none;
-}
-
-.house-circle {
+.circle-template {
   display: none;
 }
 

@@ -19,6 +19,8 @@ for (const circle of circles) {
          playerCircle.appendChild(innerCircle);
          innerCircle.innerHTML = '<img src="images/icon-paper.svg" />'
 
+        
+
 
       player[0].appendChild(playerCircle)
      
