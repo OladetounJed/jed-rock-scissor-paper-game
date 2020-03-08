@@ -177,6 +177,14 @@ body {
   letter-spacing: 0.1em;
 }
 
+.player-circle {
+  display: none;
+}
+
+.house-circle {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   #scoreboard {
     width: 80%;
