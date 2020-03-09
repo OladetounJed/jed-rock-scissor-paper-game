@@ -9,7 +9,10 @@ body {
 #game-container {
   margin: 0;
   width: 100%;
+ 
 }
+
+
 
 #scoreboard {
   width: 60%;
@@ -53,8 +56,6 @@ body {
   margin: auto;
   margin-top: 10em;
   position: relative;
- 
-  
 }
 
 .triangle {
@@ -151,9 +152,38 @@ body {
 }
 
 .rule-section {
-  display: none;
+  background-color: white;
+  width: 26em;
+  height: 26em;
+  color: black;
+  border-radius: 1em;
+  position: absolute;
+  top: 15em;
+  left: 50%;
+  margin-left: -13em;
+  
 }
 
+.rule-section-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rule-section-header h1 {
+  margin: 0;
+  padding: 1em;
+}
+
+.close {
+  height: 1em;
+  margin: 0;
+  padding: 2em;
+}
+
+.rule-img {
+  display: block;
+  margin: auto;
+}
 .rules-btn-con {
   display: flex;
   justify-content: space-between;
@@ -175,10 +205,6 @@ body {
 .signature {
   font-size: 1.1em;
   letter-spacing: 0.1em;
-}
-
-.circle-template {
-  display: none;
 }
 
 @media (max-width: 1024px) {
@@ -231,6 +257,9 @@ body {
     top: 53%;
     left: 35%;
   }
+  .rule-section {
+    top: 13em;
+  }
 }
 
 @media (max-width: 700px) {
@@ -260,9 +289,39 @@ body {
     position: absolute;
     top: 23em;
     left: 30%;
-    
   }
- 
+  .rule-section {
+    background-color: white;
+    width: 18em;
+    height: 18em;
+    color: black;
+    border-radius: 1em;
+    margin-left: -9em;
+  }
+
+  .rule-section-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rule-section-header h1 {
+    margin: 0;
+    padding: 1em;
+  }
+
+  .close {
+    height: 1em;
+    margin: 0;
+    padding: 2em;
+  }
+
+  .rule-img {
+    display: block;
+    margin: auto;
+    width: 10em;
+    margin-top: 1em;
+  }
+
   .rules-btn-con {
     margin-top: 13em;
     flex-direction: column-reverse;
