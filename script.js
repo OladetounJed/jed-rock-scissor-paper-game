@@ -67,3 +67,7 @@ for (const circle of circles) {
 function gameStarted(e) {
  
 }
+
+
+let idx = Math.floor(Math.random() * this.images.length);
+    this.selectedImage = this.images[idx]
