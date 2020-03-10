@@ -42,7 +42,7 @@
           </div>
         </div>
       </section>
-      <section id="game-started-section" v-else>
+      <section id="game-started-section" v-else v-bind:style="{opacity: opacity}">
         
         <div class="player-section">
           <p>YOU PICKED</p>
@@ -91,7 +91,7 @@
         <img src="images/image-rules.svg" / class="rule-img">
       </section>
       <section class="rules-btn-con">
-        <p class="signature">J &#128522;d, Set Awon Frontend Geng</p>
+        <p class="signature"><a target="_blank" href="https://twitter.com/oladetounjed">J &#128522;d,</a> Set Awon Frontend Geng</p>
         <button class="rules-btn" @click="ruleOpen">RULES</button>
       </section>
     </div>
