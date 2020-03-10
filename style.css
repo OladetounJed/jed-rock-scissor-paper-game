@@ -9,10 +9,7 @@ body {
 #game-container {
   margin: 0;
   width: 100%;
- 
 }
-
-
 
 #scoreboard {
   width: 60%;
@@ -56,6 +53,17 @@ body {
   margin: auto;
   margin-top: 10em;
   position: relative;
+  animation-name: opacityChange;
+  animation-duration: 0.5s;
+}
+
+@keyframes opacityChange {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .triangle {
@@ -70,6 +78,13 @@ body {
   border-radius: 50%;
   display: grid;
   place-items: center;
+}
+
+.inner-circle:hover,
+.inner-circle:active {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease-in-out;
+  transform: scale(1.1, 1.1);
 }
 
 .inner-circle {
@@ -111,6 +126,17 @@ body {
   margin-right: auto;
   text-align: center;
   margin-top: 4em;
+  animation-name: opacity;
+  animation-duration: 0.5s;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #game-started-section p {
@@ -161,7 +187,16 @@ body {
   top: 15em;
   left: 50%;
   margin-left: -13em;
-  
+}
+
+@keyframes ruleOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .rule-section-header {
@@ -178,11 +213,14 @@ body {
   height: 1em;
   margin: 0;
   padding: 2em;
+  color: black;
 }
 
 .rule-img {
   display: block;
   margin: auto;
+  animation-name: ruleOpacity;
+  animation-duration: 2s;
 }
 .rules-btn-con {
   display: flex;
@@ -197,6 +235,12 @@ body {
   border: solid 0.1em white;
   color: white;
   border-radius: 0.5em;
+  transition: all .5s ease;
+}
+
+.rules-btn:hover, .rules-btn:active {
+  background-color: white;
+  color: black;
 }
 .rules-btn-con {
   margin-top: 8em;
@@ -205,6 +249,20 @@ body {
 .signature {
   font-size: 1.1em;
   letter-spacing: 0.1em;
+}
+
+a {
+  color: gold;
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+
+}
+
+button:active {
+  background-color: black;
 }
 
 @media (max-width: 1024px) {
