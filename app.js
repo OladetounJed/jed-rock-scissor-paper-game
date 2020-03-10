@@ -16,13 +16,23 @@ let app = new Vue({
     randomHouseCircle: null,
     ruleVisibility: false,
     bodyOpacity: "",
-    ruleOpacity: ""
+    ruleOpacity: "",
+    opacity: 1
   },
 
-  computed: {},
+  mounted() {
+    if(localStorage.score) {
+      this.score = localStorage.score;
+    }
+  },
+  
+
+  
   methods: {
     gameStarted: function(event) {
       this.gameRunning = true;
+      this.randomItem();
+      
     },
 
     paperSelect: function() {
@@ -46,7 +56,7 @@ let app = new Vue({
         this.score++;
       } else if (this.randomHouseCircle == this.houseCircle[2]) {
         this.result = "YOU LOSE";
-        this.score++;
+        this.score--;
       } else {
         this.result = "DRAW";
         this.score;
@@ -66,8 +76,11 @@ let app = new Vue({
         this.score;
       }
     },
-    randomItem(items) {
-      return items[Math.floor(Math.random() * items.length)];
+    randomItem() {
+      this.randomHouseCircle = this.houseCircle[
+        Math.floor(Math.random() * this.houseCircle.length)
+      ];
+     
     },
     ruleOpen: function() {
       this.ruleVisibility = true;
@@ -78,15 +91,20 @@ let app = new Vue({
       this.ruleVisibility = false;
       this.bodyOpacity = 1;
     },
-    newGame: function(){
-        this.gameRunning = false;
-        
-    }
-   
+    newGame: function() {
+      this.gameRunning = false;
+      this.paper = false;
+      this.scissor = false;
+      this.rock = false;
+      this.randomItem();
+      this.presist();
+      
+    },
     
-  },
-
-  created() {
-    this.randomHouseCircle = this.randomItem(this.houseCircle);
-  }
+    presist() {
+      localStorage.score = this.score;
+     
+    }
+ 
+}
 });
